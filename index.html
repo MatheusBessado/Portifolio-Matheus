@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Matheus - Desenvolvedor Backend</h1>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#sobre-mim">Sobre Mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacoes">Formações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="sobre-mim">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou Matheus, um futuro desenvolvedor de sistemas backend Java com grande entusiasmo para aprender e crescer na área de tecnologia. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e tenho um forte interesse em desenvolvimento de software.</p>
+            <p>Estou em busca do meu primeiro estágio para aplicar meus conhecimentos e habilidades em um ambiente profissional. Tenho interesse em contribuir para a equipe, além de adquirir novas experiências e aprimorar minhas competências técnicas.</p>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Java - Programação Orientada a Objetos</li>
+                <li>MySQL</li>
+                <li>Comunicativo</li>
+                <li>Trabalho em equipe</li>
+            </ul>
+        </section>
+
+        <section id="formacoes">
+            <h2>Formações</h2>
+            <p>Iniciei meus estudos na TI em 2024, onde comecei minha primeira faculdade.</p>
+            <strong class="instituicao">Uninter</strong> Tecnólogo em Análise e Desenvolvimento de Sistemas 2024 - 2026
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p><a href="mailto:matheusbessado08@gmail.com" class="small-button"><i class="fas fa-envelope"></i> Email: matheusbessado08@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/matheus-bessado-5215b7257/" target="_blank" class="small-button"><i class="fab fa-linkedin"></i> Matheus Bessado</a></p>
+            <p><a href="https://wa.me/5511982735846" target="_blank" class="small-button"><i class="fab fa-whatsapp"></i> 11 98273-5846</a></p>
+            
+            <form action="#" method="post">
+                <p>Mande uma mensagem para mim através desse formulário:</p>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

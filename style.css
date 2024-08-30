@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 60px; /* Adiciona espaço para o nav fixo */
+}
+nav {
+    background-color: #000; /* Cor preta */
+    color: #fff; /* Texto branco */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixa o nav no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o nav fique acima de outros elementos */
+    border-bottom: 2px solid red; /* Borda vermelha de 2 px */
+}
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+    opacity: 1;
+    transform: translateY(0);
+    color: red; /* Cor vermelha */
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens do menu */
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    color: #fff; /* Texto branco */
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: red; /* Cor vermelha ao passar o mouse */
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+.nav-links {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+}
+.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+}
+.nav-links ul {
+    /* flex-direction: column; */
+    padding: 0;
+}
+.nav-links ul li {
+    margin: 0;
+}
+section {
+    margin-bottom: 20px;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Começa deslocado */
+    animation: fadeInUp 1s forwards; /* Aplica a animação */
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fica visível */
+        transform: translateY(0); /* Retorna à posição original */
+    }
+}
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #333;
+}
+p {
+    line-height: 1.6;
+    color: #666;
+}
+ul {
+    padding-left: 20px;
+    color: #333;
+}
+ul li {
+    margin-bottom: 10px;
+}
+a {
+    color: red;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+a:hover {
+    text-decoration: underline;
+}
+a i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+.fa-linkedin {
+    color: #0077b5; /* Azul do LinkedIn */
+}
+.fa-whatsapp {
+    color: #25D366; /* Verde do WhatsApp */
+}
+.fa-envelope {
+    color: #000; /* Preto do e-mail */
+}
+
+.instituicao {
+    color: red;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000; /* Cor preta */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav h1 {
+        font-size: 20px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 18px;
+    }
+    nav ul li a {
+        padding: 8px 15px;
+    }
+    section {
+        padding: 10px;
+    }
+    .container {
+        padding: 10px;
+    }
+}
+/* Estilização geral do formulário */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input#email {
+    width: 80%; 
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+form textarea#message {
+    width: 100%; 
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff5f5;
+    height: 40px;
+    
+    
+}
+
